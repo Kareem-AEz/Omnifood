@@ -1,0 +1,277 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEMS
+
+- Font sizez (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 
+    52 / 62 / 74 / 86 / 98
+
+    - Font weights
+    Defaults: 400
+    600
+    700
+    800
+    
+    - Line heights
+    Default: 1
+    paragraph: 1.6
+    big-Headlines: 0.98
+
+    -letter spacing
+    -0.5px
+    0.75px
+    0.1rem
+    
+    
+--- 02 COLORS
+    
+    Primary: 
+    #e67e22
+    
+    Accents:
+    
+    Tints:
+    #fdf2e9
+    #f3bf91
+    #eea564
+    
+    Shades:
+    #cf711f
+    #45260a
+    Greys:
+    #ddd
+    #aaa
+    #555
+    #333
+
+    Tags:
+    #90ee90
+    #ffe96d
+
+ --- 03 SHADOWS
+    box-shadow: 0 1.2rem 3.2rem rgba(51, 51, 51, 0.05);
+    
+--- 04 BORDER-RADIUS
+4
+8
+12
+    
+    
+
+--- 05 WHITESPACE
+    - SPACING SYSTMES (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 /
+        96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  outline: 1rem solid rgba(230, 125, 34, 0.5);
+  outline-offset: 0rem;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  overflow-x: hidden;
+}
+
+img {
+  /* pointer-events: none; */
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.list-icon {
+  color: #cf711f;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.aborted {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.aborted .list-icon {
+  color: transparent;
+}
+/***********************/
+/* Utility */
+/***********************/
+.grid {
+  display: grid;
+  /* column-gap: 4.8rem; */
+  /* row-gap: 9.6rem; */
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--mid-col-gap {
+  column-gap: 2.8rem;
+}
+.grid--mid-col-gap {
+  column-gap: 4.8rem;
+}
+.grid--sm-row-gap {
+  row-gap: 2.4rem;
+}
+.grid--mid-row-gap {
+  row-gap: 4.8rem;
+}
+.grid--lg-row-gap {
+  row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--align-v {
+  align-items: center;
+}
+
+.self-end {
+  align-self: end;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 1.4rem 3.2rem;
+  border-radius: 8px;
+
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+
+  transition: background-color 0.2s, transform 0.3s;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+  transform: scale(1.02);
+}
+.btn--outline:link,
+.btn--outline:visited {
+  color: #777;
+  box-shadow: inset 0 0 0 2px #777;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  /* background-color: #e67e22; */
+  box-shadow: inset 0 0 0 2px #e67e22;
+  color: #e67e22;
+  /* transform: scale(1.02); */
+}
+
+.heading-primary,
+.heading-secondary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #555;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 0.98;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #cf711f;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.heading-tertiary {
+  font-size: 3.6rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
