@@ -6,7 +6,7 @@ Check out the live version here: [Omnifood on Netlify](https://omnifood-spaghett
 
 ## Current Progress
 
-- **Intermediate HTML & CSS:** The foundation of the project, demonstrating a solid understanding of HTML5 and CSS3 principles.
+- **Intermediate HTML & CSS:** This is the foundation of the project, demonstrating a solid understanding of HTML5 and CSS3 principles.
 
 ## Next to Come
 
